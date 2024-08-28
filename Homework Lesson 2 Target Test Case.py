@@ -26,4 +26,4 @@ driver.find_element(By.XPATH, "//span[@class='sc-859e7637-0 hHZPQy']").click()
 sleep(4)
 
 # Verify search results
-driver.find_element(By.XPATH, "//*[@class='styles__StyledHeading-sc-1awz1yh-0 styles__AuthHeading-sc-kz6dq2-2 gfuwhI kcHdEa']")
+driver.find_element(By.XPATH, "//h1[@class='sc-fe064f5c-0 sc-315b8ab9-2 WObnm gClYfs']")
