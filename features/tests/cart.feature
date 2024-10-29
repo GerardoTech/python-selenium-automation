@@ -10,6 +10,8 @@ Feature: Cart tests
     Given Open Target main page
     When Search for a cup
     And Click add item to shopping cart
+    And Store product name
     And Confirm add to cart button
     And Open cart page
     Then Verify correct item is in shopping cart
+    And Verify cart has correct product
