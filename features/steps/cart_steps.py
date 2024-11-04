@@ -12,7 +12,6 @@ CART_SUMMARY = (By.CSS_SELECTOR, "[data-test='boxEmptyMsg']")
 SIDE_NAV_PRODUCT_NAME = (By.CSS_SELECTOR, "[data-test='content-wrapper'] h4")
 
 
-
 @when('Open cart page')
 def open_cart(context):
     context.driver.get('https://www.target.com/cart')
@@ -50,10 +49,8 @@ def verify_item_in_cart(context):
 
 
 @then("Verify Your cart is empty message is shown")
-def verify_cart_is_empty(context):
-    actual_result = context.driver.find_element(*CART_SUMMARY).text
-    expected_result = 'Your cart is empty'
-    assert expected_result in actual_result, f'Expected {expected_result}, got {actual_result}'
+def verify_cart_empty(context):
+    context.app.cart_page.verify_cart_empty()
 
 
 @then('Verify cart has {amount} item(s)')

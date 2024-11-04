@@ -1,9 +1,9 @@
 Feature: Cart tests
 
-#  Scenario: User receives correct massage for empty cart
-#    Given Open Target main page
-#    When Click on cart icon
-#    Then Verify Your cart is empty message is shown
+  Scenario: User receives correct massage for empty cart
+    Given Open Target main page
+    When Click on cart icon
+    Then Verify Your cart is empty message is shown
 
 
   Scenario: User can add items to cart
