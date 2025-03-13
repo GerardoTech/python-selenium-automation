@@ -15,18 +15,21 @@ driver.maximize_window()
 # open the url
 driver.get('https://www.target.com/')
 
-driver.find_element(By.XPATH, "//input[@data-test='@web/Search/SearchInput']").send_keys('tea')
-
+driver.find_element(By.ID, 'search').send_keys('tea')
 driver.find_element(By.XPATH, "//button[@data-test='@web/Search/SearchButton']").click()
-sleep(3)
+sleep(6)
 
+# verification:
+# by finding 1 element
 # driver.find_element(By.XPATH, "//div[@data-test='lp-resultsCount']")
-# print("Test Case Passed")
+# print('Test case passed')
 
+# by checking text
 actual_text = driver.find_element(By.XPATH, "//div[@data-test='lp-resultsCount']").text
-# print('Actual text:\n', actual_text)
+expected_text = 'tea'
 
-assert 'tea' in actual_text, f'Error. Text tea not in {actual_text}'
-print("Test Case Passed")
+assert expected_text in actual_text, f'Error. Text {expected_text} not in {actual_text}'
+print('Test case passed')
 
-sleep(3)
+# Note: please do not use if/else for verification, you test case must fail with an Exception if a feature is broken
+# sleep(10)
