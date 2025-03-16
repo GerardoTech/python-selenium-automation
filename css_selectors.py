@@ -44,3 +44,39 @@ driver.find_element(By.CSS_SELECTOR, "[data-test='accountNav-signIn']")
 driver.find_element(By.CSS_SELECTOR, "[class*='styles_ndsBaseButton'][class*='styles_ndsButtonPrimary']")
 
 # Note: CSS cannot connect to text()
+
+# Lesson 3 Homework
+# Amazon Logo
+driver.find_element(By.CSS_SELECTOR, ".a-icon.a-icon-logo")
+
+# Create Account
+driver.find_element(By.XPATH, "//h1[contains(text(), 'Create account')]")
+
+# Your name
+driver.find_element(By.ID, 'ap_customer_name')
+
+# Email
+driver.find_element(By.ID, 'ap_email')
+
+# Password
+driver.find_element(By.ID, 'ap_password')
+
+# Password must be at least 6 characters
+driver.find_element(By.XPATH, "//div[contains(text(), '  Passwords must be at least 6 characters.')]")
+
+# Re-enter password
+driver.find_element(By.ID, 'ap_password_check')
+
+# Create your Amazon account/continue Button
+driver.find_element(By.ID, 'continue')
+
+# Conditions of Use
+driver.find_element(By.XPATH, "//a[text()='Conditions of Use']")
+
+# Privacy Notice
+driver.find_element(By.XPATH, "//a[text()='Privacy Notice']")
+
+# Sign In
+driver.find_element(By.CSS_SELECTOR, "a.a-link-emphasis")
+
+
