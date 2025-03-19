@@ -27,14 +27,14 @@ def store_product_name(context):
 
 @when('Confirm Add to Cart button from side navigation')
 def side_nav_click_add_to_cart(context):
-    context.driver.find_element(*SIDE_NAV_ADD_TO_CART_BTN).click()
-    sleep(5)
+    context.driver.wait.until(
+        EC.element_to_be_clickable(SIDE_NAV_ADD_TO_CART_BTN)
+    ).click()
 
 
 @then('Verify correct search results shown for {expected_text}')
 def verify_search_results(context, expected_text):
     actual_text = context.driver.find_element(*SEARCH_RESULTS_TEXT).text
-    expected_text = 'tea'
     assert expected_text in actual_text, f'Error. Text {expected_text} not in {actual_text}'
 
 
