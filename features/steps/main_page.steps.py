@@ -4,7 +4,6 @@ from behave import given, when, then
 from time import sleep
 
 
-SEARCH_FIELD = (By.ID, 'search')
 HEADER_LINKS = (By.CSS_SELECTOR, "[id*='utilityNav']")
 SIGN_IN_BTN = (By.CSS_SELECTOR, "[data-test='@web/AccountLink']")
 POP_UP_SIGN_IN_BTN = (By.CSS_SELECTOR, "[data-test='accountNav-signIn']")
