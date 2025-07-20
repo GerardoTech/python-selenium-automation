@@ -9,4 +9,4 @@ SIGN_IN_TEXT = (By.CSS_SELECTOR, "h1[class^='styles_ndsHeading']")
 def sign_in_form(context):
     expected_result = 'Sign in or create account'
     actual_result = context.driver.find_element(*SIGN_IN_TEXT).text
-    assert expected_result == actual_result, f'Expected {expected_result} did no match actual {actual_result}'
+    assert expected_result == actual_result, f"Expected '{expected_result}' did not match actual {actual_result}"
