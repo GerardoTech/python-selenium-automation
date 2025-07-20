@@ -4,6 +4,7 @@ Feature: Target search test cases
     Given Open target main page
     When Search for tea
     Then Verify correct search results shown for tea
+    And Verify tea in URL
 
 
 #  Scenario Outline: User can search for a product on Target

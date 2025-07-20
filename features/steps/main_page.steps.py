@@ -12,10 +12,6 @@ POP_UP_SIGN_IN_BTN = (By.CSS_SELECTOR, "[data-test='accountNav-signIn']")
 @given('Open target main page')
 def open_target_main(context):
     context.app.main_page.open_main_page()
-    context.driver.wait.until(
-        EC.element_to_be_clickable(SEARCH_FIELD),
-        message='Search field not clickable'
-    )
 
 
 @when('Search for {search_word}')

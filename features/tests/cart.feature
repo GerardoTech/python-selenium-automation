@@ -4,4 +4,5 @@ Feature: Cart Tests
     Given Open target main page
     When Click on Cart icon
     Then Verify 'Your cart is empty' message is shown
-    And Verify tea in URL
+    And Verify cart page opens
+

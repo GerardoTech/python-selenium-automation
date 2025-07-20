@@ -7,9 +7,9 @@ class Header(Page):
     SEARCH_BTN = (By.XPATH, "//button[@data-test='@web/Search/SearchButton']")
     CART_ICON = (By.CSS_SELECTOR, "[data-test='@web/CartLink']")
 
-    def search(self):
-        self.input_text("tea", *self.SEARCH_FIELD)
-        self.click(self.SEARCH_BTN)
+    def search(self, search_word):
+        self.input_text(search_word, *self.SEARCH_FIELD)
+        self.click(*self.SEARCH_BTN)
 
     def click_cart(self):
         self.click(*self.CART_ICON)
