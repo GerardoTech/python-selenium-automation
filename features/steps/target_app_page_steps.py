@@ -1,4 +1,4 @@
-om behave import given, when, then
+from behave import given, when, then
 from time import sleep
 
 
@@ -18,6 +18,11 @@ def click_pp_link(context):
     context.app.target_app_page.click_pp_link()
 
 
+@when('Click Terms and Conditions link')
+def click_tc_link(context):
+    context.app.target_app_page.click_tc_link()
+
+
 @when('Switch to new window')
 def switch_to_window(context):
     context.app.base_page.switch_to_new_window()
@@ -26,6 +31,11 @@ def switch_to_window(context):
 @then('Verify Privacy Policy page opened')
 def verify_pp_opened(context):
     context.app.target_app_page.verify_pp_opened()
+
+
+@then('Verify Terms and Conditions page opened')
+def verify_tc_opened(context):
+    context.app.target_app_page.verify_tc_opened()
 
 
 @then('Close current page')
