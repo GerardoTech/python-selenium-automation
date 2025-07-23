@@ -34,8 +34,8 @@ def browser_init(context, scenario_name):
 
     ### BROWSERSTACK ###
     # Register for BrowserStack, then grab it from https://www.browserstack.com/accounts/settings
-    bs_user = ''
-    bs_key = ''
+    bs_user = 'gerardoo_WpKojL'
+    bs_key = 'qvUCb6zeUXQzxzxmzyjf'
     url = f'http://{bs_user}:{bs_key}@hub-cloud.browserstack.com/wd/hub'
 
     options = Options()
