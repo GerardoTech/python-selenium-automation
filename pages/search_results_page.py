@@ -1,5 +1,6 @@
 from selenium.webdriver.common.by import By
 from pages.base_page import Page
+from time import sleep
 
 
 SIDE_NAV_PRODUCT_NAME = (By.CSS_SELECTOR, "[data-test='content-wrapper'] h4")
@@ -9,6 +10,14 @@ ADD_TO_CART_BTN = (By.CSS_SELECTOR, "[id*='addToCartButton']")
 
 class SearchResultsPage(Page):
     SEARCH_RESULTS_TEXT = (By.XPATH, "//div[@data-test='lp-resultsCount']")
+    FAVORITES_BTN = (By.CSS_SELECTOR, "[data-test='FavoritesButton']")
+    FAVORITES_TOOLTIP_TXT = (By.XPATH, "//*[text()='Click to sign in and save']")
+
+    def hover_fav_icon(self):
+        self.hover_element(*self.FAVORITES_BTN)
+
+    def verify_fav_tooltip(self):
+        self.wait_until_visible(*self.FAVORITES_TOOLTIP_TXT)
 
     def verify_search_results(self, expected_text):
         self.verify_partial_text(expected_text, *self.SEARCH_RESULTS_TEXT)
