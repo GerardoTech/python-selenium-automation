@@ -4,6 +4,7 @@ Feature: Main page UI test
     Given Open target main page
     Then Verify at least 1 link shown
 
+  @smoke
   Scenario: Verify all header links shown
     Given Open target main page
     Then Verify 6 links shown
